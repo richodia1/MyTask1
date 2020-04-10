@@ -18,8 +18,8 @@
     <Import Project="$(NuGetPackageRoot)specrun.runner\3.2.15\build\SpecRun.Runner.props" Condition="Exists('$(NuGetPackageRoot)specrun.runner\3.2.15\build\SpecRun.Runner.props')" />
     <Import Project="$(NuGetPackageRoot)specrun.specflow.3-1-0\3.2.15\build\SpecRun.SpecFlow.3-1-0.props" Condition="Exists('$(NuGetPackageRoot)specrun.specflow.3-1-0\3.2.15\build\SpecRun.SpecFlow.3-1-0.props')" />
     <Import Project="$(NuGetPackageRoot)specflow.tools.msbuild.generation\3.1.95\build\SpecFlow.Tools.MsBuild.Generation.props" Condition="Exists('$(NuGetPackageRoot)specflow.tools.msbuild.generation\3.1.95\build\SpecFlow.Tools.MsBuild.Generation.props')" />
-    <Import Project="$(NuGetPackageRoot)mstest.testadapter\1.3.2\build\netcoreapp1.0\MSTest.TestAdapter.props" Condition="Exists('$(NuGetPackageRoot)mstest.testadapter\1.3.2\build\netcoreapp1.0\MSTest.TestAdapter.props')" />
     <Import Project="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\build\netcoreapp2.1\Microsoft.NETCore.App.props" Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\build\netcoreapp2.1\Microsoft.NETCore.App.props')" />
+    <Import Project="$(NuGetPackageRoot)mstest.testadapter\1.3.2\build\netcoreapp1.0\MSTest.TestAdapter.props" Condition="Exists('$(NuGetPackageRoot)mstest.testadapter\1.3.2\build\netcoreapp1.0\MSTest.TestAdapter.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>

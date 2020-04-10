@@ -265,3 +265,6 @@ C:\projects\MyTask1\MyTask1\obj\Debug\netcoreapp2.1\MyTask1.AssemblyInfoInputs.c
 C:\projects\MyTask1\MyTask1\obj\Debug\netcoreapp2.1\MyTask1.AssemblyInfo.cs
 C:\projects\MyTask1\MyTask1\obj\Debug\netcoreapp2.1\MyTask1.dll
 C:\projects\MyTask1\MyTask1\obj\Debug\netcoreapp2.1\MyTask1.pdb
+C:\projects\MyTask1\MyTask1\bin\Debug\netcoreapp2.1\RestDataRepository.dll
+C:\projects\MyTask1\MyTask1\bin\Debug\netcoreapp2.1\RestDataRepository.pdb
+C:\projects\MyTask1\MyTask1\obj\Debug\netcoreapp2.1\MyTask1.csproj.CopyComplete

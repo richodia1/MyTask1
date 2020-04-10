@@ -1,40 +1,50 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RestDataRepository;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using TechTalk.SpecFlow;
 
 namespace MyTask1
 {
-    class RegistrationFeature
+    [Binding]
+    public class RegistrationFeature
     {
+        RegisterRepo _repo = new RegisterRepo();
+
         [Given(@"that a user want to register successfully with valid '(.*)':email and '(.*)':password")]
-        public void GivenThatAUserWantToRegisterSuccessfullyWithValidEmailAndPassword(string p0, string p1)
+        public void GivenThatAUserWantToRegisterSuccessfullyWithValidEmailAndPassword(string email, string password)
         {
-            ScenarioContext.Current.Pending();
+            // Act
+            var actualResult = _repo.SuccessfulRegistration(email, password);
+
+            // Assert
+            Assert.AreEqual(200, _repo.getRegisterationStatusCode(email, password));
+            Assert.IsNotNull(actualResult);
         }
 
-        [When(@"I trigger Post request registration")]
-        public void WhenITriggerPostRequestRegistration()
+
+
+        [Then(@"I should get a successful registration response with token")]
+        public void ThenIShouldGetASuccessfulRegistrationResponseWithTokenUsingEmailAndPassword(string email, string password)
         {
-            ScenarioContext.Current.Pending();
+            var actualResult = _repo.SuccessfulRegistration(email, password);
+            Assert.AreEqual(200, _repo.getRegisterationStatusCode(email, password));
         }
 
-        [Then(@"I should get a successful registration response with token using '(.*)':email and '(.*)':password")]
-        public void ThenIShouldGetASuccessfulRegistrationResponseWithTokenUsingEmailAndPassword(string p0, string p1)
+        [Given(@"that a user Register with an incomplete input parameter with email: '(.*)' and  '(.*)':")]
+        public void GivenThatAUserRegisterWithAnIncompleteInputParameterWithEmailAndInvalidPassword(string email, string password)
         {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Given(@"that a user Register with an incomplete input parameter with email: '(.*)' and invalid password: '(.*)':")]
-        public void GivenThatAUserRegisterWithAnIncompleteInputParameterWithEmailAndInvalidPassword(string p0, string p1)
-        {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(400, _repo.getRegisterationStatusCode(email, password));
+            var actualResult = _repo.UnsuccessfulRegistration(email, password);
+            Assert.IsNotNull(actualResult);
         }
 
         [Then(@"my response code for incomplete input registration should be (.*) badrequest and error response")]
-        public void ThenMyResponseCodeForIncompleteInputRegistrationShouldBeBadrequestAndErrorResponse(int p0)
+        public void ThenMyResponseCodeForIncompleteInputRegistrationShouldBeBadrequestAndErrorResponse(string email, string password)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(400, _repo.getRegisterationStatusCode(email, password));
+
         }
 
     }
