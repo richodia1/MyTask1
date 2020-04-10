@@ -1,0 +1,6 @@
+C:\projects\MyTask1\RestDataRepository\bin\Debug\netcoreapp2.1\RestDataRepository.deps.json
+C:\projects\MyTask1\RestDataRepository\bin\Debug\netcoreapp2.1\RestDataRepository.dll
+C:\projects\MyTask1\RestDataRepository\obj\Debug\netcoreapp2.1\RestDataRepository.csprojAssemblyReference.cache
+C:\projects\MyTask1\RestDataRepository\obj\Debug\netcoreapp2.1\RestDataRepository.csproj.CoreCompileInputs.cache
+C:\projects\MyTask1\RestDataRepository\obj\Debug\netcoreapp2.1\RestDataRepository.AssemblyInfoInputs.cache
+C:\projects\MyTask1\RestDataRepository\obj\Debug\netcoreapp2.1\RestDataRepository.AssemblyInfo.cs
